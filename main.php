@@ -39,7 +39,7 @@ function start($telegram,$update)
 
 		exit;
 		}
-			elseif ($text == "Ricerca") {
+			elseif ($text == "Ricerca" || $text == "/ricerca") {
 				$reply = "Scrivi la parola da cercare anteponendo il carattere ?, ad esempio: ?confessioni";
 				$content = array('chat_id' => $chat_id, 'text' => $reply,'disable_web_page_preview'=>true);
 				$telegram->sendMessage($content);
@@ -47,7 +47,7 @@ function start($telegram,$update)
 	//			$this->create_keyboard_temp($telegram,$chat_id);
 exit;
 
-}elseif ($text == "Articoli") {
+}elseif ($text == "Articoli"|| $text == "/articoli") {
 	$reply = "Digita il numero dell'Articolo della Costituzione da cercare. Esempio: 1";
 	$reply .= "\nSe invece vuoi tutti gli articoli digita %Costituzione ma attenzione l'elenco è molto lungo";
 	$content = array('chat_id' => $chat_id, 'text' => $reply,'disable_web_page_preview'=>true);
