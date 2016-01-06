@@ -114,7 +114,8 @@ exit;
 
 
 					$homepage .="\n";
-					$homepage .="Articolo N°: ".$csv[$i][0]."\n".$csv[$i][1]."\n";
+			 		if($csv[$i][0] !=NULL)		$homepage .="Articolo N°: ".$csv[$i][0]."\n";
+					$homepage .=$csv[$i][1]."\n";
 					$homepage .="\n____________\n";
 
 				}
